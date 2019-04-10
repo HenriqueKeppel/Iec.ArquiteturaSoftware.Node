@@ -1,4 +1,5 @@
 const yargs = require("yargs");
+const util = require("./util.js");
 
 //console.log(process.argv);
 
@@ -20,8 +21,10 @@ yargs.command({
         }
     },
     handler: function (yargs){
-        console.log(yargs.name);
-        console.log(yargs.description);
+        util.add(yargs.name, yargs.description);
+        console.log('Tarefa criada com sucesso!');
+        //console.log(yargs.name);
+        //console.log(yargs.description);
     }
 }).command({
     command: 'remove',
@@ -39,15 +42,16 @@ yargs.command({
 }).command({
     command: 'list',
     describe: 'list tasks',
-    builder: {
-        name: {
-            describe: 'task name',
-            demandOption: true,
-            type: 'string',
-        }
-    },
+    // builder: {
+    //     name: {
+    //         describe: 'task name',
+    //         demandOption: true,
+    //         type: 'string',
+    //     }
+    // },
     handler: function (yargs){
-        console.log(yargs.name);
+        //console.log(yargs.name);
+        util.list();
     }
 }).command({
     command: 'find',
