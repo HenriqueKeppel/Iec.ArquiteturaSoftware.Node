@@ -37,7 +37,9 @@ yargs.command({
         }
     },
     handler: function (yargs){
-        console.log(yargs.name);
+        util.remove(yargs.name);
+        console.log("Item removido com sucesso!");
+        //console.log(yargs.name);
     }
 }).command({
     command: 'list',
@@ -51,7 +53,9 @@ yargs.command({
     // },
     handler: function (yargs){
         //console.log(yargs.name);
-        util.list();
+        const retorno = util.list();
+        for(i = 0; i < retorno.length; i++)
+            console.log(retorno[i]);
     }
 }).command({
     command: 'find',
@@ -64,7 +68,9 @@ yargs.command({
         }
     },
     handler: function (yargs){
-        console.log(yargs.name);
+        //util.find(yargs.name);
+        console.log(util.find(yargs.name));
+        //console.log(yargs.name);
     }
 })
 
