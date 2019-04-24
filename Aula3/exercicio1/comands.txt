@@ -1,0 +1,14 @@
+npm init
+npm install request
+npm install yargs
+
+node app.js cotacao --aluno "teste" --tipoAtivo "2"
+
+https://www.worldtradingdata.com/home
+darthkeppel@gmail.com
+keppel1245
+
+api key: gghLOlguKF7SnH5DPjpdEnQwjN8sAY7WVW5gKpsIpuhzinlG7CHRPY2fEvjw
+
+EXAMPLO DE CHAMADA
+node app.js cotacao --ativo "PETR4.SA"
